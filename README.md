@@ -54,7 +54,7 @@ line in a specific transcript.
 
 ## Working app
 
-Local: see below. Deployed link: **[add your Streamlit Cloud URL here]**
+Local: see below. Deployed link: **[(https://expertcalltranscriptanalyzer-cckjdeh94cy5wtcownwmox.streamlit.app/)]**
 
 ## Run locally
 
