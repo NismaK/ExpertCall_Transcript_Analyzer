@@ -17,7 +17,7 @@ flowchart TD
     F --> G
     G --> H[Streamlit UI: per-expert tabs + cross-expert tab + ask tab]
 ```
-No database or vector store — for 3 transcripts, the full transcript is sent straight to the model each time. Simple, fast, and easy to defend in an interview at this scale.
+No database or vector store — for 3 transcripts, the full transcript is sent straight to the model each time.
 
 ## Model choice
 
@@ -54,7 +54,7 @@ line in a specific transcript.
 
 ## Working app
 
-Local: see below. Deployed link: **[add your Streamlit Cloud URL here]**
+Local: see below. Deployed link: **https://expertcalltranscriptanalyzer-cckjdeh94cy5wtcownwmox.streamlit.app/**
 
 ## Run locally
 
@@ -64,4 +64,4 @@ streamlit run app.py
 ```
 
 Paste a free Groq key (console.groq.com/keys) into the sidebar, upload the 3
-transcripts, click Analyze.
+transcripts, click Analyze and you are good to go!!😃 
