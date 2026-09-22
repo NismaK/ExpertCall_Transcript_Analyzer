@@ -5,20 +5,19 @@ questions per expert with cited quotes and timestamps, finds cross-expert
 themes/disagreements, and answers free-form questions across all three.
 
 ## Architecture
-
+```mermaid
+flowchart TD
+    A[3 .txt Transcripts] --> B[Parser: timestamp + speaker + text]
+    B --> C{Groq API: openai/gpt-oss-120b}
+    C --> D[extract_answers: per-expert Q&A]
+    C --> E[analyze_themes: cross-expert themes + disagreements]
+    C --> F[ask_question: free-form Q&A]
+    D --> G[Quote Verification: substring check vs transcript]
+    E --> G
+    F --> G
+    G --> H[Streamlit UI: per-expert tabs + cross-expert tab + ask tab]
 ```
-3 .txt transcripts → Parser (timestamp + speaker + text)
-    → Groq API (openai/gpt-oss-120b), 3 calls:
-         1. per-expert answers to interview-guide questions
-         2. cross-expert themes + disagreements
-         3. free-form Q&A across all transcripts
-    → Quote verification (checks quote exists in source transcript)
-    → Streamlit UI (per-expert tabs + cross-expert tab + ask-a-question tab)
-```
-
-No database or vector store — for 3 transcripts, the full transcript is sent
-straight to the model each time. Simple, fast, and easy to defend in an
-interview at this scale.
+No database or vector store — for 3 transcripts, the full transcript is sent straight to the model each time. Simple, fast, and easy to defend in an interview at this scale.
 
 ## Model choice
 
