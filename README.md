@@ -54,7 +54,7 @@ line in a specific transcript.
 
 ## Working app
 
-Local: see below. Deployed link: **https://expertcalltranscriptanalyzer-cckjdeh94cy5wtcownwmox.streamlit.app/**
+Local: see below. Deployed link: **[add your Streamlit Cloud URL here]**
 
 ## Run locally
 
@@ -64,4 +64,4 @@ streamlit run app.py
 ```
 
 Paste a free Groq key (console.groq.com/keys) into the sidebar, upload the 3
-transcripts, click Analyze and you are good to go!!😃 
+transcripts, click Analyze.
